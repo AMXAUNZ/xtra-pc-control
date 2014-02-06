@@ -16,7 +16,6 @@ define_constant
 char VERSION_XTRA_PC_CONTROL_LISTENER[] = 'v1.0.0'
 
 include 'xtra-pc-control-api'
-include 'debug'
 
 
 /*
@@ -45,17 +44,18 @@ dev dvXtraPcControlMainPorts[] = {9001:1:0}
 define_function xtraPcControlNotifyLockStatus (dev xtraPcControl, char lockStatus[], char user[])
 {
 	// dvXtraPcControl is Xtra PC Control application.
-	// lockStatus contains the PC lock status
+	// lockStatus contains the PC lock status (XTRA_PC_CONTROL_LOCK_STATUS_LOCKED | XTRA_PC_CONTROL_LOCK_STATUS_UNLOCKED)
 	// user contains the Windows username.
 }
 */
 
+#warn '@TODO - xtra-pc-listener - parsing data for process list response'
 /*
 #define INCLUDE_XTRA_PC_CONTROL_NOTIFY_PROCESS_LIST_ITEM_CALLBACK
 define_function xtraPcControlNotifyProcessListItem (dev xtraPcControl, integer processListCount, integer processListItemIndex, char processName[])
 {
 	// dvXtraPcControl is Xtra PC Control application.
-	// processListCount contains the PC lock status
+	// processListCount contains the ......
 	// user contains the Windows username.
 }
 */
